@@ -13,22 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.chaos.monkey.chaosdemo.controller;
+package com.example.chaos.monkey.chaosdemo.repo;
 
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.data.repository.PagingAndSortingRepository;
 
-/**
- * Simple REST Controller example
- *
- * @author Benjamin Wilms
- */
-@RestController
-public class GreetingRestController {
-
-    @GetMapping("/rest/hello")
-    public ResponseEntity<String> sayHello() {
-        return ResponseEntity.ok("REST hello!");
-    }
+/** @author Benjamin Wilms */
+public interface HelloRepository extends PagingAndSortingRepository<Hello, Long> {
 }
